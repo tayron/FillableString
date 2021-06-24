@@ -58,4 +58,8 @@ module.exports = class FillableString {
   removeWhiteSpaces = function() {
     this._string = this._string.replace(/\s/g,'')
   }  
+
+  getByPosition = function(start, end) {    
+    return this._string.substring((start-1), end);
+  }
 }

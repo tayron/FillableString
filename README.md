@@ -89,3 +89,18 @@ Retorno da execução acima será:
 ```sh
 JOÃOPEDRODASILVA
 ```
+
+* **getByPosition(start, end)**
+Retrona um trecho da string com base na sua posição, onde a primeira posição do texto é sempre 1, exemplo:
+
+```js
+stringText = new FillableString();
+stringText.fill('JOÃO PEDRO DA SILVA')
+console.info(stringText.getByPosition(6, 10))
+```
+
+Retorno da execução acima será:
+```sh
+PEDRO
+```
+
