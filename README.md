@@ -1,5 +1,5 @@
 # FillableString
-Classe para criação de strings, onde se deseja ter controle sobre possição e quantidade de caracteres, 
+Classe para criação de strings, onde se deseja ter controle sobre posição e quantidade de caracteres, 
 ideal para criação de string para arquivos de remessas bancárias e outros onde controle da informação no texto é feito por posição.
 
 ## Ambiente de execução
