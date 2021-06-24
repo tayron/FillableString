@@ -33,6 +33,7 @@ JOÃO PEDRO DA SILVA                           joao@gmail.com2121
 
 ## Documentação dos métodos
 * **fill(string)**
+
 Preenche com determinado texto a string criada, exemplo:
 ```js
 const FillableString = require('./FillableString.js')
@@ -46,6 +47,7 @@ REMESSA
 ```
 
 * **fill(string, size, position)**
+
 Preenche com determinado texto a string criada possibilitando informar quantas vezes o texto irá se repetir informando esse valor no segundo parâmetro. Pode definir se o se a string será adicionada à direita ou a esquerda do texto, através do parametro **possition** onde os valores permitidos são **FillableString.POSITION_LEFT** ou **FillableString.POSITION_RIGHT**, exemplo: 
 ```js
 stringText = new FillableString();
@@ -61,6 +63,7 @@ Retorno da execução acima será:
 ```
 
 * **removeSpecialCharacter()**
+
 Altera string removendo todos os caracteres especiais, exemplo:
 
 ```js
@@ -76,6 +79,7 @@ JOAO PEDRO DA SILVA
 ```
 
 * **removeWhiteSpaces()**
+
 Altera string removendo todos os espaços vazios, exemplo:
 
 ```js
@@ -91,7 +95,8 @@ JOÃOPEDRODASILVA
 ```
 
 * **getByPosition(start, end)**
-Retrona um trecho da string com base na sua posição, onde a primeira posição do texto é sempre 1, exemplo:
+
+Retorna um trecho da string com base na sua posição, onde a primeira posição do texto é sempre 1, exemplo:
 
 ```js
 stringText = new FillableString();
