@@ -4,8 +4,8 @@ module.exports = class FillableString {
   static POSITION_LEFT = 'left'
   static POSITION_RIGHT = 'right'
 
-  constructor() {
-    this._string = ''
+  constructor(string) {
+    this._string = string
   }
 
   fillAndCompleteWith(string, fillable, size, position) {
