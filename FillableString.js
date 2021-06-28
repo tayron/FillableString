@@ -8,6 +8,20 @@ module.exports = class FillableString {
     this._string = ''
   }
 
+  fillAndCompleteWith(string, fillable, size, position) {
+    let fillableString = string
+
+    if (size > 0 && position === FillableString.POSITION_LEFT) {
+      fillableString = fillableString.padStart(size, fillable)
+    }
+
+    if (size > 0 && position === FillableString.POSITION_RIGHT) {                
+      fillableString = fillableString.padEnd(size, fillable)
+    }
+    
+    this._string += fillableString
+  }
+
   fill = function (string, size, position) {
     if (size > 0 && position === FillableString.POSITION_LEFT) {
       this._concatLeft(string, size)

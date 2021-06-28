@@ -62,6 +62,22 @@ Retorno da execução acima será:
 @@REMESSA--
 ```
 
+* **fillAndCompleteWith(string, fillable, size, position)**
+
+Preenche uma string com número exatos de caracteres completando espaços vazios com algum caracter especifico, 
+ideal para preenchimento de string com tamanho fixo, onde deve-se completar os espaços faltante com algum caracters, exemplo:
+
+```js
+stringText = new FillableString();
+stringText.fillAndCompleteWith('Pedro', 0, 15, FillableString.POSITION_LEFT)
+console.info(stringText.getString())
+```
+
+Retorno da execução acima será:
+```sh
+0000000000Pedro
+```
+
 * **removeSpecialCharacter()**
 
 Altera string removendo todos os caracteres especiais, exemplo:
@@ -108,4 +124,3 @@ Retorno da execução acima será:
 ```sh
 PEDRO
 ```
-
