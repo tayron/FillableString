@@ -5,7 +5,7 @@ module.exports = class FillableString {
   static POSITION_RIGHT = 'right'
 
   constructor(string) {
-    this._string = string
+    this._string = string !== undefined ? string : ''
   }
 
   fillAndCompleteWith(string, fillable, size, position) {
