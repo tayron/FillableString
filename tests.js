@@ -1,6 +1,7 @@
 const FillableString = require('./FillableString.js')
 
 // Teste de uso geral
+
 stringText = new FillableString();
 stringText.fill('REMESSA')
 stringText.fill(' ')
@@ -30,3 +31,8 @@ console.info(stringText3.getString().length)
 stringText3.fillAndCompleteWith('Maria', '#', 6, FillableString.POSITION_RIGHT)
 console.info(stringText3.getString())
 console.info(stringText3.getString().length)
+
+stringText4 = new FillableString();
+stringText4.fill("**", 5)
+console.info(stringText4.getString())
+

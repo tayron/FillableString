@@ -23,6 +23,12 @@ module.exports = class FillableString {
   }
 
   fill = function (string, size, position) {
+
+    if (size > 0 & !position) {  
+      console.info("Aquiiiiii")            
+        this._concatRight(string, size)      
+    }
+
     if (size > 0 && position === FillableString.POSITION_LEFT) {
       this._concatLeft(string, size)
     }
@@ -31,7 +37,7 @@ module.exports = class FillableString {
       this._concatRight(string, size)
     }    
 
-    if (!size && this._string !== undefined) {
+    if (!size && !position && this._string !== undefined) {
       this._string += string
     }
   }

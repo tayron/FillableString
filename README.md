@@ -46,6 +46,20 @@ Retorno da execução acima será:
 REMESSA
 ```
 
+* **fill(string, size)**
+
+Preenche com determinado texto a string criada repetindo ela x número de vezes:
+```js
+const FillableString = require('./FillableString.js')
+
+stringText = new FillableString();
+stringText.fill('R', 2)
+```
+Retorno da execução acima será:
+```sh
+RR
+```
+
 * **fill(string, size, position)**
 
 Preenche com determinado texto a string criada possibilitando informar quantas vezes o texto irá se repetir informando esse valor no segundo parâmetro. Pode definir se o se a string será adicionada à direita ou a esquerda do texto, através do parametro **possition** onde os valores permitidos são **FillableString.POSITION_LEFT** ou **FillableString.POSITION_RIGHT**, exemplo: 
