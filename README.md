@@ -14,7 +14,7 @@ npm install fillablestring --save
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('REMESSA')
 stringText.fill(' ')
 stringText.fill("123456", 5, FillableString.POSITION_RIGHT)
@@ -44,7 +44,7 @@ Preenche com determinado texto a string criada, exemplo:
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('REMESSA')
 
 console.info(stringText.getString())
@@ -60,7 +60,7 @@ Preenche com determinado texto a string criada repetindo ela x número de vezes:
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('R', 2)
 
 console.info(stringText.getString())
@@ -76,7 +76,7 @@ Preenche com determinado texto a string criada possibilitando informar quantas v
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('REMESSA')
 stringText.fill("@", 2, FillableString.POSITION_LEFT)
 stringText.fill("-", 2, FillableString.POSITION_RIGHT)
@@ -97,7 +97,7 @@ ideal para preenchimento de string com tamanho fixo, onde deve-se completar os e
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fillAndCompleteWith('Pedro', 0, 15, FillableString.POSITION_LEFT)
 
 console.info(stringText.getString())
@@ -115,7 +115,7 @@ Altera string removendo todos os caracteres especiais, exemplo:
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('JOÃO PEDRO DA SILVA')
 stringText.removeSpecialCharacter()
 
@@ -134,7 +134,7 @@ Altera string removendo todos os espaços vazios, exemplo:
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('JOÃO PEDRO DA SILVA')
 stringText.removeWhiteSpaces()
 
@@ -153,7 +153,7 @@ Retorna um trecho da string com base na sua posição, onde a primeira posição
 ```js
 const FillableString = require('fillablestring')
 
-stringText = new FillableString();
+const stringText = new FillableString();
 stringText.fill('JOÃO PEDRO DA SILVA')
 
 console.info(stringText.getByPosition(6, 10))
