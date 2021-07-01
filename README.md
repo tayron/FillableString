@@ -2,11 +2,13 @@
 Classe para criação de strings, onde se deseja ter controle sobre posição e quantidade de caracteres, 
 ideal para criação de string para arquivos de remessas bancárias e outros onde controle da informação no texto é feito por posição.
 
-Repositório NPM: ```https://www.npmjs.com/package/fillablestring```
+Repositório NPM: https://www.npmjs.com/package/fillablestring
 
 ## Instalação via NPM
 
-```sh npm install fillablestring --save```
+```sh 
+npm install fillablestring --save
+```
 
 ## Exemplo de uso 
 ```js
