@@ -24,8 +24,7 @@ module.exports = class FillableString {
 
   fill = function (string, size, position) {
 
-    if (size > 0 & !position) {  
-      console.info("Aquiiiiii")            
+    if (size > 0 & !position) {                
         this._concatRight(string, size)      
     }
 
