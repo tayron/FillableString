@@ -163,3 +163,39 @@ Retorno da execução acima será:
 ```sh
 PEDRO
 ```
+
+* **insertBefore(stringToFind, stringToAdd)**
+
+Insere uma string antes de uma string informada, exemplo:
+
+```js
+const FillableString = require('fillablestring')
+
+const stringText = new FillableString();
+stringText.fill('JOÃO PEDRO')
+stringText.insertBefore('JOÃO', 'NOME: ')
+console.info(stringText.getString())
+```
+
+Retorno da execução acima será:
+```sh
+NOME: JOÃO PEDRO
+```
+
+* **insertAfter(stringToFind, stringToAdd)**
+
+Insere uma string após a string informada, exemplo:
+
+```js
+const FillableString = require('fillablestring')
+
+const stringText = new FillableString();
+stringText.fill('JOÃO PEDRO')
+stringText.insertAfter('JOÃO', ' E')
+console.info(stringText.getString())
+```
+
+Retorno da execução acima será:
+```sh
+JOÃO E PEDRO
+```

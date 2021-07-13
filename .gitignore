@@ -1,0 +1,8 @@
+# package directories
+node_modules
+
+# Jest directories
+coverage
+
+# log files
+yarn-error.log

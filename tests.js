@@ -1,7 +1,6 @@
 const FillableString = require('./FillableString.js')
 
-// Teste de uso geral
-
+/*
 stringText = new FillableString();
 stringText.fill('REMESSA')
 stringText.fill(' ')
@@ -36,3 +35,19 @@ stringText4 = new FillableString();
 stringText4.fill("**", 5)
 console.info(stringText4.getString())
 
+stringText5 = new FillableString();
+stringText5.fill('jOÃO PEDRO DA SILVA')
+console.info(stringText5.getString())
+stringText5.insertBefore('jOÃO', 'NOME: ')
+console.info(stringText5.getString())
+
+const stringText6 = new FillableString();
+stringText6.fill('JOÃO PEDRO')
+stringText6.insertBefore('JOÃO', 'NOME: ')
+console.info(stringText6.getString())
+*/
+
+const stringText7 = new FillableString();
+stringText7.fill('JOÃO PEDRO')
+stringText7.insertAfter('JOÃO', ' E')
+console.info(stringText7.getString())

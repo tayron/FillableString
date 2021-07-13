@@ -1,6 +1,6 @@
 {
     "name": "fillablestring",
-    "version": "1.3.3",
+    "version": "1.4.0",
     "description": "Classe para criação de strings, onde se deseja ter controle sobre posiçao e quantidade de caracteres.",
     "main": "FillableString.js",
     "scripts": {

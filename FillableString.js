@@ -51,6 +51,20 @@ module.exports = class FillableString {
     } 
   }
 
+  insertBefore = function(stringToFind, stringToAdd) {
+    const stringToReplace = stringToAdd + stringToFind
+    if (this._string !== '') {
+      this._string = this._string.replace(stringToFind, stringToReplace)
+    }
+  }
+
+  insertAfter = function(stringToFind, stringToAdd) {
+    const stringToReplace = stringToFind + stringToAdd
+    if (this._string !== '') {
+      this._string = this._string.replace(stringToFind, stringToReplace)
+    }
+  }
+
   getString = function () {
     return this._string
   }
