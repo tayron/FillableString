@@ -164,6 +164,20 @@ Retorno da execução acima será:
 PEDRO
 ```
 
+* **completeWith(string, size, position)**
+
+Preenche os espaços vazios de uma string até completar um certo número de caracteres, podendo escolher a posição do preenchimento, sendo para direita ou esquerda, exemplo:
+
+```js
+const stringText = new FillableString();
+stringText.fill('123')
+stringText.completeWith(0, 6, FillableString.POSITION_LEFT)
+```
+Retorno da execução acima será:
+```sh
+000123
+```
+
 * **insertBefore(stringToFind, stringToAdd)**
 
 Insere uma string antes de uma string informada, exemplo:

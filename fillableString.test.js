@@ -1,6 +1,13 @@
 const FillableString = require('./FillableString.js')
 
 describe('FillableString', () => {
+    it('Testando método constructor(string)', () => {
+        const stringText = new FillableString('REMESSA');
+
+        const expectResult = 'REMESSA'
+        expect(stringText.getString()).toEqual(expectResult);
+    });
+
     it('Testando método fill(string)', () => {
         const stringText = new FillableString();
         stringText.fill('REMESSA')
@@ -81,16 +88,50 @@ describe('FillableString', () => {
         expect(stringText.getByPosition(2, 4)).toEqual(expectResult);
     });
 
-    it('Testando método insertBefore(stringToFind, stringToAdd)', () => {
+    it('Testando método completeWith(string, size, position) : FillableString.POSITION_RIGHT', () => {
+        const stringText = new FillableString();
+        stringText.fill('123')
+        stringText.completeWith(0, 6, FillableString.POSITION_RIGHT)
+
+        const expectResult = '123000'
+        expect(stringText.getString()).toEqual(expectResult);
+    });
+
+    it('Testando método completeWith(string, size, position) : FillableString.POSITION_LEFT', () => {
+        const stringText = new FillableString();
+        stringText.fill('123')
+        stringText.completeWith(0, 6, FillableString.POSITION_LEFT)
+
+        const expectResult = '000123'
+        expect(stringText.getString()).toEqual(expectResult);
+    });    
+
+    it('Testando método insertBefore(stringToFind, stringToAdd) : String vazia', () => {
+        const stringText = new FillableString();
+        stringText.insertBefore('JOÃO', 'NOME: ')
+
+        const expectResult = ''
+        expect(stringText.getString()).toEqual(expectResult);
+    }); 
+
+    it('Testando método insertBefore(stringToFind, stringToAdd) : Com string preenchida', () => {
         const stringText = new FillableString();
         stringText.fill('JOÃO PEDRO')
         stringText.insertBefore('JOÃO', 'NOME: ')
 
         const expectResult = 'NOME: JOÃO PEDRO'
         expect(stringText.getString()).toEqual(expectResult);
-    });  
+    }); 
     
-    it('Testando método insertAfter(stringToFind, stringToAdd)', () => {
+    it('Testando método insertAfter(stringToFind, stringToAdd) : String vazia', () => {
+        const stringText = new FillableString();
+        stringText.insertAfter('JOÃO', ' E')
+
+        const expectResult = ''
+        expect(stringText.getString()).toEqual(expectResult);
+    });    
+    
+    it('Testando método insertAfter(stringToFind, stringToAdd) : Com string preenchida', () => {
         const stringText = new FillableString();
         stringText.fill('JOÃO PEDRO')
         stringText.insertAfter('JOÃO', ' E')
