@@ -85,7 +85,7 @@ module.exports = class FillableString {
   }  
 
   removeSpecialCharacter = function() {    
-    this._string = this._string.replace(/[^a-zA-Z ]/g, "")
+    this._string = this._string.replace(/[^a-zA-Z0-9 ]/g, "")
   }
 
   removeWhiteSpaces = function() {

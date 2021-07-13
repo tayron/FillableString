@@ -116,7 +116,7 @@ Altera string removendo todos os caracteres especiais, exemplo:
 const FillableString = require('fillablestring')
 
 const stringText = new FillableString();
-stringText.fill('JOÃO PEDRO DA SILVA')
+stringText.fill('654.498.480-99')
 stringText.removeSpecialCharacter()
 
 console.info(stringText.getString())
@@ -124,7 +124,7 @@ console.info(stringText.getString())
 
 Retorno da execução acima será:
 ```sh
-JOAO PEDRO DA SILVA
+65449848099
 ```
 
 * **removeWhiteSpaces()**
