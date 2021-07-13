@@ -213,3 +213,53 @@ Retorno da execução acima será:
 ```sh
 JOÃO E PEDRO
 ```
+
+## Teste unitário
+
+Para executar os testes unitários deve-se executar o comando para instalar as dependências:
+
+```sh
+yarn install
+```
+
+Após instalado as depedências deve-se executar o teste untiário com o comando:
+```sh
+yarn test
+```
+O retorno deverá ser:
+
+```sh
+yarn run v1.22.10
+$ jest --config ./jest.config.json
+ PASS  ./fillableString.test.js
+  FillableString
+    ✓ Testando método constructor(string) (1 ms)
+    ✓ Testando método fill(string)
+    ✓ Testando método fill(string, size)
+    ✓ Testando método fill(string, size, position) : FillableString.POSITION_RIGHT
+    ✓ Testando método fill(string, size, position) : FillableString.POSITION_LEFT
+    ✓ Testando método fillAndCompleteWith(string, fillable, size, position) : FillableString.POSITION_RIGHT (1 ms)
+    ✓ Testando método fillAndCompleteWith(string, fillable, size, position) : FillableString.POSITION_LEFT
+    ✓ Testando método removeSpecialCharacter()
+    ✓ Testando método removeWhiteSpaces()
+    ✓ Testando método getByPosition(start, end)
+    ✓ Testando método completeWith(string, size, position) : FillableString.POSITION_RIGHT (1 ms)
+    ✓ Testando método completeWith(string, size, position) : FillableString.POSITION_LEFT
+    ✓ Testando método insertBefore(stringToFind, stringToAdd) : String vazia (1 ms)
+    ✓ Testando método insertBefore(stringToFind, stringToAdd) : Com string preenchida
+    ✓ Testando método insertAfter(stringToFind, stringToAdd) : String vazia
+    ✓ Testando método insertAfter(stringToFind, stringToAdd) : Com string preenchida
+
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |      100 |     100 |     100 |                   
+ FillableString.js |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        0.191 s, estimated 1 s
+Ran all test suites.
+Done in 0.61s.
+```
